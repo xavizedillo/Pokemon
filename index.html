@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Entrenador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Registro Oficial</h1>
+        <p>Inscribe tus datos para iniciar tu viaje</p>
+    </header>
+
+    <main class="con-principal">
+
+        <section class="tarjeta-formulario">
+
+            <form id="pokemonForm" novalidate>
+
+                <div class="grupo-formulario"> 
+
+                    <label for="nombre">Nombre de Entrenador</label>
+                    <input type="text" id="nombre" placeholder="Ej. Ash Ketchup">
+                    <div class="error-mensaje"> El nombre debe de tener al menos 3 letras</div>
+
+                </div>
+                
+                <div class="grupo-formulario">
+
+                    <label for="region">Región</label>
+                    
+                    <select id="region">
+                        
+                        <option value="">--Seleccione una region</option>
+                        <option value="Kanto">Kanto</option>
+                        <option value="Johto">Johto</option>
+                        <option value="Hoenn">Hoenn</option>
+                        <option value="Sinnoh">Sinnoh</option>
+
+                    </select>
+
+                    <div class="error-mensaje">Debes de seleccionar una region</div>
+
+                </div>
+
+                <div class="grupo-formulario">
+
+                    <label for="grupo-formulario">Tipo de inicial favorito</label>
+                    
+                    <div class="grupo-opciones">
+
+                        <label><input type="radio" name="inicial" value="Planta"> Planta </label>
+                        <label><input type="radio" name="inicial" value="Fuego"> Fuego </label>
+                        <label><input type="radio" name="inicial" value="Agua"> Agua </label>
+
+                    </div>
+
+                    <div class="error-mensaje"> Seleccione un tipo de Pokemon </div>
+
+                </div>
+
+                <div class="grupo-formulario">
+                    
+                <label for="motivacion"> ¿Por qué quieres ser entrenador? </label>
+                <textarea id="motivacion" rows="3" placeholder="Cuentanos tu experiencia...."></textarea>
+                <div class="error-mensaje"> Por favor escribe tu experiencia </div>
+                
+                </div>
+
+                <div class="grupo-formulario">
+
+                    <div class="checkbox">
+
+                        <input type="checkbox" id="terminos">
+                        <label for="terminos">Acepto las reglas de la Liga Pokemon</label>
+
+                    </div>
+
+                    <div class="error-mensaje"> Debes de aceptar los terminos para continuar </div>
+
+                </div>
+
+                <button type="submit">Registrar entrenador</button>
+
+            </form>
+        </section>
+
+        <section class="tarjeta-tabla">
+        
+            <h2>Entrenadores registrados</h2>
+            <div id="mensajeVacio" class="tabla-vacia"> No hay entrenadores registrados todavia</div>
+
+            <table id="tablaEntrenadores" style="display: none;">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+                        <th>Región</th>
+                        <th>Inicial</th>
+                        <th>Motivación</th>
+
+                    </tr>
+
+                </thead>
+                <tbody id="cuerpoTabla">
+                     
+                </tbody>
+            
+            </table>
+        
+        </section>
+
+    </main>
+
+    
+    <script src="script.js"></script>
+
+
+    
+</body>
+
+</html>
