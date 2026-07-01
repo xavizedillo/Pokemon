@@ -1,0 +1,118 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #ff1f1f; 
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tarjeta-formulario, .tarjeta-tabla {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 300px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.grupo-opciones, .grupo-checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3b4cca; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #22319c;
+}
+
+
+.grupo-formulario.invalido input[type="text"],
+.grupo-formulario.invalido select,
+.grupo-formulario.invalido textarea {
+    border-color: #d90429;
+    background-color: #fff5f5;
+}
+
+
+.error-mensaje {
+    color: #d90429;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; 
+}
+
+
+.grupo-formulario.invalido .error-mensaje {
+    display: block;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+.tabla-vacia {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
